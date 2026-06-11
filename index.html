@@ -39,7 +39,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <title>Feedback World Model Enables Precise Guidance of Diffusion Policy</title>
+  <title>GIVE: Grounding Human Gestures in Vision-Language-Action Models</title>
 
   <!-- Inline SVG Favicon -->
   <link rel="icon" type="image/svg+xml"
@@ -66,8 +66,8 @@
 <body>
 
   <main id="main-content">
-
-    <!-- Hero header -->
+    
+        <!-- Hero header -->
     <section class="hero publication-header">
       <div class="hero-body">
         <div class="container is-max-desktop">
@@ -112,34 +112,70 @@
               </div>
 
               <!-- Paper Links -->
-              <div class="column has-text-centered">
-                <div class="publication-links">
-                  <span class="link-block">
-                    <a href="https://arxiv.org/pdf/2605.15705" target="_blank" rel="noopener" class="external-link button is-dark"
-                       title="Paper PDF on arXiv">
-                      <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                      <span>Paper</span>
-                    </a>
-                  </span>
-                  <span class="link-block">
-                    <a href="https://arxiv.org/abs/2605.15705" target="_blank" rel="noopener" class="external-link button is-dark"
-                       title="arXiv abstract page">
-                      <span class="icon"><i class="ai ai-arxiv"></i></span>
-                      <span>arXiv</span>
-                    </a>
-                  </span>
-                  <span class="link-block">
-                    <a href="javascript:void(0);" class="external-link button is-dark" title="Code will be released soon" style="opacity: 0.7; cursor: not-allowed;">
-                      <span class="icon"><i class="fab fa-github"></i></span>
-                      <span>Code (Soon)</span>
-                    </a>
-                  </span>
-                  <span class="link-block">
-                    <a href="#BibTeX" class="external-link button is-dark">
-                      <span class="icon"><i class="fas fa-quote-left"></i></span>
-                      <span>BibTeX</span>
-                    </a>
-                  </span>
+              <div class="column has-text-centered" style="margin-top: 1.5rem;">
+                
+                <style>
+                  .modern-btn {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0.5rem 1.25rem;
+                    margin: 0.25rem 0.5rem;
+                    background-color: #1f2022;
+                    color: #ffffff !important;
+                    border: 1px solid #3a3b3c;
+                    border-radius: 9999px;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    text-decoration: none;
+                    transition: all 0.2s ease-in-out;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  }
+                  .modern-btn:hover {
+                    background-color: #2b2d30;
+                    border-color: #5bc0be;
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 10px rgba(91, 192, 190, 0.2);
+                  }
+                  .modern-btn .icon {
+                    margin-right: 0.4rem;
+                    font-size: 1.1em;
+                  }
+                  .modern-btn.disabled-btn {
+                    opacity: 0.55;
+                    cursor: not-allowed;
+                    background-color: #1f2022;
+                    border-color: #3a3b3c;
+                    transform: none;
+                    box-shadow: none;
+                  }
+                  .modern-btn.disabled-btn:hover {
+                    pointer-events: none;
+                  }
+                </style>
+
+                <div class="publication-links" style="display: flex; flex-wrap: wrap; justify-content: center;">
+                  
+                  <a href="https://arxiv.org/pdf/2605.15705" target="_blank" rel="noopener" class="modern-btn" title="Paper PDF on arXiv">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                  
+                  <a href="https://arxiv.org/abs/2605.15705" target="_blank" rel="noopener" class="modern-btn" title="arXiv abstract page">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                  
+                  <a href="javascript:void(0);" class="modern-btn disabled-btn" title="Code will be released soon">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code (Soon)</span>
+                  </a>
+                  
+                  <a href="#BibTeX" class="modern-btn">
+                    <span class="icon"><i class="fas fa-quote-left"></i></span>
+                    <span>BibTeX</span>
+                  </a>
+
                 </div>
               </div>
 
@@ -151,62 +187,72 @@
     <!-- End hero header -->
 
 
-    <!-- Teaser image -->
-    <section class="hero teaser">
+    <!-- Teaser image and TL;DR pitch -->
+    <section class="section hero" id="tldr" style="padding-top: 2rem; padding-bottom: 4rem;">
       <div class="container is-max-desktop">
-        <div class="hero-body">
-          <figure class="image">
-            <img src="static\images\teaser.png" alt="Comparison between VLA policy and GIVE" />
-          </figure>
-          <h2 class="subtitle has-text-centered" style="margin-top: 1.25rem;">
-            <strong>Comparison between VLA policies and GIVE.</strong> General VLA policies struggle to accurately ground target objects and interpret human intent from hand gestures, whereas GIVE incorporates visual-semantic guidance that improves intent comprehension and enhances HRI performance.
-          </h2>
-        </div>
-      </div>
-    </section>
-    <!-- End teaser image -->
-
-
-    <!-- TL;DR pitch -->
-    <section class="section hero is-light" id="tldr">
-      <div class="container is-max-desktop">
+        
+        <!-- 添加与后文一致的章节标题 -->
         <div class="columns is-centered">
-          <div class="column is-four-fifths">
-            <div class="tldr-block">
-              <div class="tldr-ornament" aria-hidden="true"></div>
+          <div class="column is-full">
+            <h2 class="title is-3">Highlights</h2>
+          </div>
+        </div>
+        
+        <figure class="image" style="margin: 1rem 0 1rem 0;">
+          <img src="static/images/teaser.png" alt="Comparison between VLA policy and GIVE" style="width: 100%; max-width: 100%; height: auto; display: block; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border-radius: 8px;" />
+        </figure>
+        
+        <!-- <p class="has-text-centered" style="font-size: 0.95rem; color: #e5e7eb; margin-top: 0.5rem; margin-bottom: 2.5rem;">
+          <strong style="color: #ffffff;">Comparison between VLA policies and GIVE.</strong> General VLA policies struggle to accurately ground target objects and interpret human intent from hand gestures, whereas GIVE incorporates visual-semantic guidance that improves intent comprehension and enhances HRI performance.
+        </p> -->
 
-              <p class="tldr-lead">
-                Current VLA models treat robotic manipulation as a purely language-driven task, struggling when human intentions are conveyed through non-verbal gestures.
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <div class="content has-text-justified">
+              
+              <p>
+                Current VLA models treat robotic manipulation as a purely language-driven task, struggling when human intentions are conveyed through non-verbal gestures. To address this, <strong>we propose GIVE</strong> and our core contributions are:
               </p>
 
-              <p class="tldr-body">
-                We propose <strong>GIVE</strong>, an effective approach that enhances pre-trained VLA models with human gesture understanding <span class="keyword-highlight-contrary">without architectural modifications</span>. By incorporating gesture information through two complementary pathways—a <span class="keyword-highlight-primary">visual pathway</span> for object grounding and a <span class="keyword-highlight-primary">semantic pathway</span> for robust intent grounding—GIVE enables VLA policies to accurately associate gestures with manipulation behaviors.
-              </p>
+              <ul>
+                <li>
+                  <strong>Effective Method   without Architectural Modifications:</strong> We propose an effective approach that injects human gesture cues into pre-trained VLA models without modifying their architecture.
+                </li>
+                <li>
+                  <strong>Complementary Dual-path Gesture Guidance Strategy:</strong> Incorporates gesture information through a visual pathway for object grounding and a semantic pathway for interaction state grounding.
+                </li>
+                <li>
+                  <strong>Extensive Real-World Validation:</strong> Enables VLA policies to accurately associate gestures with manipulation behaviors, improving target object recognition accuracy by 40% and overall task success rate by 80%.
+                </li>
+              </ul>
 
-              <!-- 这里添加了 display: flex; flex-direction: row; 等样式强制同行显示 -->
-              <div class="tldr-stats" style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 3rem; flex-wrap: wrap; margin-top: 2rem;">
-                
-                <div class="stat-card stat-card-green" style="text-align: center; flex: 1;">
-                  <div class="stat-num" style="font-size: 2.5rem; font-weight: bold; color: #5bc0be;">&uarr;&nbsp;40%</div>
-                  <div class="stat-label" style="text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; color: #888; margin-top: 0.5rem;">target object recognition accuracy</div>
-                </div>
-                
-                <!-- 竖线分割符 -->
-                <div class="stat-divider" aria-hidden="true" style="width: 1px; height: 60px; background-color: #444;"></div>
-                
-                <div class="stat-card stat-card-green" style="text-align: center; flex: 1;">
-                  <div class="stat-num" style="font-size: 2.5rem; font-weight: bold; color: #5bc0be;">&uarr;&nbsp;80%</div>
-                  <div class="stat-label" style="text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; color: #888; margin-top: 0.5rem;">overall task success rate</div>
-                </div>
-
-              </div>
             </div>
           </div>
         </div>
+
+        <div class="tldr-stats" style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 4rem; flex-wrap: wrap; margin-top: 2.5rem;">
+          
+          <div class="stat-card" style="text-align: center;">
+            <div class="stat-num" style="font-size: 3.5rem; font-weight: 800; color: #5bc0be; line-height: 1;">+40<span style="font-size: 2rem;">%</span></div>
+            <div class="stat-label" style="text-transform: uppercase; font-size: 0.85rem; font-weight: 600; letter-spacing: 1px; color: #888; margin-top: 0.8rem;">Target Grounding Accuracy</div>
+          </div>
+          
+          <div class="stat-divider" aria-hidden="true" style="width: 2px; height: 60px; background-color: #333; border-radius: 2px;"></div>
+          
+          <div class="stat-card" style="text-align: center;">
+            <div class="stat-num" style="font-size: 3.5rem; font-weight: 800; color: #5bc0be; line-height: 1;">+80<span style="font-size: 2rem;">%</span></div>
+            <div class="stat-label" style="text-transform: uppercase; font-size: 0.85rem; font-weight: 600; letter-spacing: 1px; color: #888; margin-top: 0.8rem;">Overall Task Success Rate</div>
+          </div>
+
+        </div>
+
       </div>
     </section>
-    <!-- End TL;DR -->
+    <!-- End teaser image and TL;DR pitch -->
 
+    <div style="width: 100%; background-color: #0f0f0f; padding: 2rem 0;">
+      <div style="height: 1px; background: linear-gradient(to right, transparent, #333 50%, transparent); width: 80%; margin: 0 auto;"></div>
+    </div>
 
     <!-- Real-World Task Demos (moved up — hero-of-the-page, eye-catching evidence) -->
     <section class="section" id="real-world-demos">
@@ -214,13 +260,8 @@
         <div class="columns is-centered">
           <div class="column is-full">
             <h2 class="title is-3">Real-World Demos</h2>
-            <div class="content has-text-justified">
-              <p>
-                All physical experiments are conducted on a <strong>Galaxea R1-Lite dual-arm robot</strong>. The demonstrations show a sequential grasp-then-handover HRI task. The videos below directly compare our <strong>GIVE</strong> framework against the baseline <strong>&pi;<sub>0.5</sub></strong> policy.
-              </p>
-            </div>
 
-            <div class="demo-task" style="margin-bottom: 4rem;">
+            <div class="demo-task" style="margin-top: 1.5rem; margin-bottom: 4rem;">
               <h3 class="demo-task-title" style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem; text-align: center;">Experiment comparison with baseline &pi;<sub>0.5</sub></h3>
               <div class="video-container" style="text-align: center;">
                 <video autoplay controls loop muted playsinline style="width: 100%; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.4); background-color: #1a1a1a;">
@@ -229,44 +270,30 @@
                 </video>
               </div>
             </div>
-
-            <hr style="background-color: #333; margin: 3rem 0;">
-
-            <div class="demo-task" style="margin-bottom: 2rem;">
-              <h3 class="demo-task-title" style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem; text-align: center;">Performance on unseen human participants</h3>
-              <p style="margin-bottom: 1.5rem; font-size: 0.95rem; color: #888; text-align: center;">Evaluating robustness against variations in human body shapes, clothing, and hand sizes outside the training distribution.</p>
-              <div class="video-container" style="text-align: center;">
-                <video autoplay controls loop muted playsinline style="width: 100%; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.4); background-color: #1a1a1a;">
-                  <source src="static\videos\real_world\real-time experiments.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
     </section>
     <!-- End real-world demos -->
 
-
-<!-- (Key Contributions section removed per teacher feedback — its content lives in the new punchy Abstract above.) -->
-
+    <div style="width: 100%; background-color: #0f0f0f; padding: 2rem 0;">
+      <div style="height: 1px; background: linear-gradient(to right, transparent, #333 50%, transparent); width: 80%; margin: 0 auto;"></div>
+    </div>    
 
     <!-- Method -->
-    <section class="section hero is-light">
+    <section class="section hero" id="method">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column is-full">
-            <h2 class="title is-3">Methodology</h2>
+            <h2 class="title is-3">Method</h2>
             <div class="content has-text-justified">
               
               <figure class="image" style="margin: 2rem 0 1rem 0;">
-                <img src="static\images\main_architecture.png" alt="GIVE for VLA models in HRI scenarios" style="width: 100%; max-width: 100%; height: auto; display: block; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-radius: 8px;" />
+                <img src="static\images\main_architecture.png" alt="GIVE for VLA models in HRI scenarios" style="width: 100%; max-width: 100%; height: auto; display: block; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border-radius: 8px;" />
               </figure>
-              
-              <p class="has-text-centered" style="font-size: 0.95rem; color: #888; margin-top: 0.5rem; margin-bottom: 2.5rem;">
-                <strong>GIVE for VLA models in HRI scenarios.</strong> GIVE transforms human gestures into two complementary guidance pathways: visual gesture prompting provides spatial grounding of manipulation targets, while semantic intent parsing captures high-level intent description. These cues are fed into a VLA model to generate continuous actions.
+              <!-- 核心方法介绍 (2-3句话) -->
+              <p style="color: #e5e7eb; line-height: 1.6;">
+                GIVE enhances pre-trained VLA models by transforming human gestures into two complementary guidance pathways. Specifically, the <strong style="color: #ffffff;">visual pathway</strong> overlays geometric gesture prompts onto robot observations to explicitly resolve spatial ambiguities for target grounding, while the <strong style="color: #ffffff;">semantic pathway</strong> translates continuous human hand states into high-level textual descriptions for robust intent parsing. By jointly leveraging these visual and semantic cues, GIVE enables foundation policies to accurately generate continuous manipulation actions <strong style="color: #ffffff;">without requiring any architectural modifications</strong>.
               </p>
 
             </div>
@@ -276,204 +303,143 @@
     </section>
     <!-- End method -->
 
+    <div style="width: 100%; background-color: #0f0f0f; padding: 2rem 0;">
+      <div style="height: 1px; background: linear-gradient(to right, transparent, #333 50%, transparent); width: 80%; margin: 0 auto;"></div>
+    </div>
 
-    <!-- Quantitative Results & Ablation -->
-    <section class="section hero is-light">
+    <section class="section hero" id="experiments">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column is-full">
-            <h2 class="title is-3">Quantitative Results & Ablation</h2>
-            <div class="content has-text-justified">
-              
-              <h3 class="demo-task-title" style="font-size: 1.5rem; font-weight: bold; margin-top: 1rem; margin-bottom: 1.5rem; text-align: center;">Overall Execution Performance</h3>
+            <h2 class="title is-3">Experiments & Analysis</h2>
+            
+            <div class="content has-text-justified" style="color: #e5e7eb; line-height: 1.6; margin-bottom: 2rem;">
               <p>
-                We evaluate the end-to-end performance in a sequential grasp-then-handover HRI task. The baseline &pi;<sub>0.5</sub> struggles without explicit visual guidance, achieving only a 46.7% Identify Success Rate (SR) and a 0% Handover SR. In contrast, <strong>GIVE significantly improves early-stage grounding (86.7% Identify SR) and consistently maintains an 80.0% success rate across all subsequent execution stages</strong> (Grasp, React, and Handover).
+                We evaluate <strong>GIVE</strong> on a sequential grasp-then-handover HRI task. Our analysis highlights three core findings:
               </p>
+              <ul>
+                <li><strong>Integration Strategy:</strong> Our parameter-free Visual Overlay outperforms token-based injection, preserving pretrained representations while explicitly encoding gesture-object spatial relations.</li>
+                <li><strong>Complementary Guidance:</strong> Ablations confirm that combining visual and semantic pathways provides complementary improvements, consistently maintaining an 80% success rate where visual-only models fail.</li>
+                <li><strong>Robustness & Generalization:</strong> GIVE maintains stable performance across unseen spatial layouts, objects, and diverse human participants, effectively decoupling intent reasoning from visual appearance.</li>
+              </ul>
+            </div>
 
-              <h3 class="demo-task-title" style="font-size: 1.5rem; font-weight: bold; margin-top: 2.5rem; margin-bottom: 1.5rem; text-align: center;">Ablation: Visual and Semantic Guidance Components</h3>
-              <p>
-                We further study the role of each design component by comparing visual-only and full visual-semantic guidance. Purely keypoint-based geometric prompting provides only limited benefits. Explicitly introducing fingertip-directed rays leads to a substantial improvement in early-stage grounding. However, visual guidance alone remains insufficient for handling temporal state transitions (achieving only 23.3% React SR). In contrast, the full model combining both visual and semantic priors provides complementary improvements.
-              </p>
-
-              <div class="table-container" style="margin-top: 1.5rem; display: flex; justify-content: center;">
-                <table class="table is-bordered is-striped is-narrow is-hoverable" style="width: max-content; max-width: 100%; text-align: center; border-collapse: collapse; background-color: #fff;">
-                  <thead>
-                    <tr style="background-color: #f5f5f5;">
-                      <th style="text-align: left; vertical-align: middle; padding: 12px 16px; white-space: nowrap;">Method</th>
-                      <th style="text-align: center; vertical-align: middle; padding: 12px 16px; white-space: nowrap;">Identify SR</th>
-                      <th style="text-align: center; vertical-align: middle; padding: 12px 16px; white-space: nowrap;">Grasp SR</th>
-                      <th style="text-align: center; vertical-align: middle; padding: 12px 16px; white-space: nowrap;">React SR</th>
-                      <th style="text-align: center; vertical-align: middle; padding: 12px 16px; white-space: nowrap;">Handover SR</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td style="text-align: left; vertical-align: middle; padding: 12px 16px; white-space: nowrap;">&pi;<sub>0.5</sub> (Baseline)</td>
-                      <td style="vertical-align: middle; padding: 12px 16px; white-space: nowrap;">46.7%</td>
-                      <td style="vertical-align: middle; padding: 12px 16px; white-space: nowrap;">6.7%</td>
-                      <td style="vertical-align: middle; padding: 12px 16px; white-space: nowrap;">3.3%</td>
-                      <td style="vertical-align: middle; padding: 12px 16px; white-space: nowrap;">0.0%</td>
-                    </tr>
-                    <tr>
-                      <td style="text-align: left; vertical-align: middle; padding: 12px 16px; white-space: nowrap;">+ VGP (keypoints)</td>
-                      <td style="vertical-align: middle; padding: 12px 16px; white-space: nowrap;">56.7%</td>
-                      <td style="vertical-align: middle; padding: 12px 16px; white-space: nowrap;">30.0%</td>
-                      <td style="vertical-align: middle; padding: 12px 16px; white-space: nowrap;">13.3%</td>
-                      <td style="vertical-align: middle; padding: 12px 16px; white-space: nowrap;">3.3%</td>
-                    </tr>
-                    <tr>
-                      <td style="text-align: left; vertical-align: middle; padding: 12px 16px; white-space: nowrap;">+ VGP (keypoints + ray)</td>
-                      <td style="vertical-align: middle; padding: 12px 16px; white-space: nowrap;">70.0%</td>
-                      <td style="vertical-align: middle; padding: 12px 16px; white-space: nowrap;">60.0%</td>
-                      <td style="vertical-align: middle; padding: 12px 16px; white-space: nowrap;">23.3%</td>
-                      <td style="vertical-align: middle; padding: 12px 16px; white-space: nowrap;">20.0%</td>
-                    </tr>
-                    <tr style="background-color: #f0fbfa;">
-                      <td style="text-align: left; vertical-align: middle; padding: 12px 16px; color: #3b8c8a; font-weight: 600; white-space: nowrap;">+ VGP & SIP (Ours)</td>
-                      <td style="vertical-align: middle; padding: 12px 16px; color: #3b8c8a; white-space: nowrap;">86.7% <span style="font-size: 0.7em; color: #4CAF50; margin-left: 4px;">&uarr;40.0%</span></td>
-                      <td style="vertical-align: middle; padding: 12px 16px; color: #3b8c8a; white-space: nowrap;">80.0% <span style="font-size: 0.7em; color: #4CAF50; margin-left: 4px;">&uarr;73.3%</span></td>
-                      <td style="vertical-align: middle; padding: 12px 16px; color: #3b8c8a; white-space: nowrap;">80.0% <span style="font-size: 0.7em; color: #4CAF50; margin-left: 4px;">&uarr;76.7%</span></td>
-                      <td style="vertical-align: middle; padding: 12px 16px; color: #3b8c8a; white-space: nowrap;">80.0% <span style="font-size: 0.7em; color: #4CAF50; margin-left: 4px;">&uarr;80.0%</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <p class="has-text-centered" style="font-size: 0.95rem; color: #888; margin-top: 0.5rem; margin-bottom: 2rem;">
-                <strong>Table 1: Ablation on visual and semantic guidance.</strong> Overall average success rates across all spatial settings. <em>VGP</em> denotes Visual Geometric Prompting, and <em>SIP</em> indicates Semantic Intent Parsing.
-              </p>
-
-              <h3 class="demo-task-title" style="font-size: 1.5rem; font-weight: bold; margin-top: 2.5rem; margin-bottom: 1.5rem; text-align: center;">Ablation: Gesture Keypoint Integration Strategies</h3>
-              <p>
-                To understand how best to incorporate gesture cues into the policy learning, we compared our parameter-free <strong>Visual Overlay</strong> against two token-based injection methods.
-              </p>
-              
-              <figure class="image" style="margin: 1.5rem auto; max-width: 70%;">
-                <img src="static\images\Fusion Mechanisms.png" alt="Ablation results on gesture keypoint integration strategies" style="width: 100%;" />
+            <div class="content">
+              <h3 class="demo-task-title" style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem; text-align: center;">Impact of gesture integration mechanisms</h3>
+              <figure class="image" style="margin: 1.5rem auto 1rem auto; max-width: 70%;">
+                <img src="static\images\Fusion Mechanisms.png" alt="Ablation results on gesture keypoint integration strategies" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);" />
               </figure>
+              <p class="has-text-centered" style="font-size: 0.95rem; color: #a3a3a3; margin-top: 0.5rem; margin-bottom: 1.5rem;">
+                Comparison of our visual overlay versus token-based injection approaches on policy performance.
+              </p>
+            </div>
+
+            <div class="content">
+              <h3 class="demo-task-title" style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0.2rem; text-align: center;">Ablation study of guidance components</h3>
               
-              <p>
-                As shown above, the direct visual overlay achieves the best performance. Token-based variants introduce additional encoding modules that can disrupt pretrained visual-language representations, whereas our visual overlay preserves them while explicitly encoding the spatial relation between the pointing gesture and candidate objects.
-              </p>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Quantitative Results & Ablation -->
-
-
-    <!-- Robustness & Generalization -->
-    <section class="section hero is-light">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column is-full">
-            <h2 class="title is-3">Robustness & Generalization</h2>
-            <div class="content has-text-justified">
-
-              <h3 class="demo-task-title" style="font-size: 1.5rem; font-weight: bold; margin-top: 1rem; margin-bottom: 1.5rem; text-align: center;">Unseen Spatial Layouts & Objects</h3>
-              <p>
-                We evaluate spatial robustness by testing three different target objects (peach, mango, carrot) across three distinct workspace locations. The baseline model exhibits significant performance degradation and high variance, indicating sensitivity to spatial distribution shifts. Conversely, GIVE maintains high and stable success rates across all challenging setups.
-              </p>
-
-              <div class="table-container" style="margin-top: 1.5rem; display: flex; justify-content: center;">
-                <table class="table is-bordered is-striped is-narrow is-hoverable" style="width: 85%; text-align: center; background-color: #fff;">
+              <div class="table-container" style="display: flex; justify-content: center;">
+                <table style="width: 100%; border-collapse: collapse; background-color: #121212; color: #d1d1d1; border-radius: 12px; overflow: hidden; margin: 1rem 0; font-family: sans-serif;">
                   <thead>
-                    <tr style="background-color: #f5f5f5;">
-                      <th style="text-align: center; vertical-align: middle;" rowspan="2">Location</th>
-                      <th style="text-align: center;" colspan="2">Peach</th>
-                      <th style="text-align: center;" colspan="2">Mango</th>
-                      <th style="text-align: center;" colspan="2">Carrot</th>
-                    </tr>
-                    <tr style="background-color: #f5f5f5;">
-                      <th style="text-align: center;">&pi;<sub>0.5</sub></th>
-                      <th style="text-align: center; color: #5bc0be;">Ours</th>
-                      <th style="text-align: center;">&pi;<sub>0.5</sub></th>
-                      <th style="text-align: center; color: #5bc0be;">Ours</th>
-                      <th style="text-align: center;">&pi;<sub>0.5</sub></th>
-                      <th style="text-align: center; color: #5bc0be;">Ours</th>
+                    <tr style="border-bottom: 2px solid #333;">
+                      <th style="padding: 16px 20px; text-align: left; color: #ffffff; font-size: 0.9rem; letter-spacing: 0.05em;">METHOD</th>
+                      <th style="padding: 16px 20px; color: #ffffff; font-size: 0.9rem; letter-spacing: 0.05em; text-align: center;">IDENTIFY SR</th>
+                      <th style="padding: 16px 20px; color: #ffffff; font-size: 0.9rem; letter-spacing: 0.05em; text-align: center;">GRASP SR</th>
+                      <th style="padding: 16px 20px; color: #ffffff; font-size: 0.9rem; letter-spacing: 0.05em; text-align: center;">REACT SR</th>
+                      <th style="padding: 16px 20px; color: #ffffff; font-size: 0.9rem; letter-spacing: 0.05em; text-align: center;">HANDOVER SR</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>A</td>
-                      <td>5 / 5</td>
-                      <td style="color: #5bc0be;">4 / 5</td>
-                      <td>3 / 5</td>
-                      <td style="color: #5bc0be;">5 / 5</td>
-                      <td>1 / 5</td>
-                      <td style="color: #5bc0be;">4 / 5</td>
+                    <tr style="border-bottom: 1px solid #222;">
+                      <td style="padding: 14px 20px; text-align: left;">π₀.₅ (Baseline)</td>
+                      <td style="padding: 14px 20px; text-align: center;">46.7%</td><td style="padding: 14px 20px; text-align: center;">6.7%</td><td style="padding: 14px 20px; text-align: center;">3.3%</td><td style="padding: 14px 20px; text-align: center;">0.0%</td>
                     </tr>
-                    <tr>
-                      <td>B</td>
-                      <td>3 / 5</td>
-                      <td style="color: #5bc0be;">5 / 5</td>
-                      <td>3 / 5</td>
-                      <td style="color: #5bc0be;">5 / 5</td>
-                      <td>0 / 5</td>
-                      <td style="color: #5bc0be;">5 / 5</td>
+                    <tr style="border-bottom: 1px solid #222;">
+                      <td style="padding: 14px 20px; text-align: left;">+ VGP (keypoints)</td>
+                      <td style="padding: 14px 20px; text-align: center;">56.7%</td><td style="padding: 14px 20px; text-align: center;">30.0%</td><td style="padding: 14px 20px; text-align: center;">13.3%</td><td style="padding: 14px 20px; text-align: center;">3.3%</td>
                     </tr>
-                    <tr>
-                      <td>C</td>
-                      <td>1 / 5</td>
-                      <td style="color: #5bc0be;">3 / 5</td>
-                      <td>2 / 5</td>
-                      <td style="color: #5bc0be;">4 / 5</td>
-                      <td>1 / 5</td>
-                      <td style="color: #5bc0be;">5 / 5</td>
+                    <tr style="border-bottom: 1px solid #222;">
+                      <td style="padding: 14px 20px; text-align: left;">+ VGP (keypoints + ray)</td>
+                      <td style="padding: 14px 20px; text-align: center;">70.0%</td><td style="padding: 14px 20px; text-align: center;">60.0%</td><td style="padding: 14px 20px; text-align: center;">23.3%</td><td style="padding: 14px 20px; text-align: center;">20.0%</td>
+                    </tr>
+                    <tr style="background-color: #1a2a2a; color: #5bc0be; font-weight: 700;">
+                      <td style="padding: 14px 20px; text-align: left;">+ VGP & SIP (Ours)</td>
+                      <td style="padding: 14px 20px; text-align: center;">86.7%</td><td style="padding: 14px 20px; text-align: center;">80.0%</td><td style="padding: 14px 20px; text-align: center;">80.0%</td><td style="padding: 14px 20px; text-align: center;">80.0%</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <p class="has-text-centered" style="font-size: 0.95rem; color: #888; margin-top: 0.5rem; margin-bottom: 3.5rem;">
-                <strong>Table 2: Robustness across different spatial layouts and interactive objects.</strong> Success rates are reported for the initial Identify &amp; Grasp stage.
+              <p class="has-text-centered" style="font-size: 0.95rem; color: #a3a3a3; margin-top: 0rem; margin-bottom: 1.5rem;">
+                VGP (Visual Geometric Prompting) and SIP (Semantic Intent Parsing) show complementary contributions to task success.
               </p>
+            </div>
 
-              <h3 class="demo-task-title" style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem; text-align: center;">Generalization to Unseen Human Participants</h3>
-              <p>
-                We further test the framework on completely unseen participants featuring hand sizes, body shapes, and clothing styles distinct from the training distribution. The baseline's identification capability deteriorates significantly. In contrast, GIVE achieves consistent identification success, demonstrating that our explicit hand skeleton visual guidance successfully decouples intent reasoning from visual appearance variations.
-              </p>
-
-              <div class="table-container" style="margin-top: 1.5rem; display: flex; justify-content: center;">
-                <table class="table is-bordered is-striped is-narrow is-hoverable" style="width: 60%; text-align: center; background-color: #fff;">
+            <div class="content">
+              <h3 class="demo-task-title" style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0.2rem; text-align: center;">Spatial robustness evaluation</h3>
+              
+              <div class="table-container" style="display: flex; justify-content: center;">
+                <table style="width: 100%; border-collapse: collapse; background-color: #121212; color: #d1d1d1; border-radius: 12px; overflow: hidden; margin: 0.8rem 0; font-family: sans-serif;">
                   <thead>
-                    <tr style="background-color: #f5f5f5;">
-                      <th style="text-align: center; vertical-align: middle;" rowspan="2">Method</th>
-                      <th style="text-align: center; vertical-align: middle;" rowspan="2">Seen Participant</th>
-                      <th style="text-align: center;" colspan="2">Unseen Participants</th>
+                    <tr style="border-bottom: 2px solid #333;">
+                      <th rowspan="2" style="padding: 16px 20px; color: #ffffff; font-size: 0.9rem; text-align: center;">LOC</th>
+                      <th colspan="2" style="padding: 16px 20px; color: #ffffff; font-size: 0.9rem; text-align: center;">PEACH</th>
+                      <th colspan="2" style="padding: 16px 20px; color: #ffffff; font-size: 0.9rem; text-align: center;">MANGO</th>
+                      <th colspan="2" style="padding: 16px 20px; color: #ffffff; font-size: 0.9rem; text-align: center;">CARROT</th>
                     </tr>
-                    <tr style="background-color: #f5f5f5;">
-                      <th style="text-align: center;">Pt. A</th>
-                      <th style="text-align: center;">Pt. B</th>
+                    <tr style="border-bottom: 2px solid #333;">
+                      <th style="padding: 8px 20px; color: #ffffff; font-size: 0.8rem; text-align: center;">π₀.₅</th>
+                      <th style="padding: 8px 20px; color: #5bc0be; font-size: 0.8rem; text-align: center;">OURS</th>
+                      <th style="padding: 8px 20px; color: #ffffff; font-size: 0.8rem; text-align: center;">π₀.₅</th>
+                      <th style="padding: 8px 20px; color: #5bc0be; font-size: 0.8rem; text-align: center;">OURS</th>
+                      <th style="padding: 8px 20px; color: #ffffff; font-size: 0.8rem; text-align: center;">π₀.₅</th>
+                      <th style="padding: 8px 20px; color: #5bc0be; font-size: 0.8rem; text-align: center;">OURS</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>Baseline (&pi;<sub>0.5</sub>)</td>
-                      <td>4 / 10</td>
-                      <td>1 / 10</td>
-                      <td>0 / 10</td>
+                    <tr style="border-bottom: 1px solid #222;">
+                      <td style="padding: 14px 20px; text-align: center;">A</td>
+                      <td>5/5</td><td style="color:#5bc0be">4/5</td>
+                      <td>3/5</td><td style="color:#5bc0be">5/5</td>
+                      <td>1/5</td><td style="color:#5bc0be">4/5</td>
                     </tr>
-                    <tr style="background-color: #f0fbfa;">
-                      <td style="color: #3b8c8a; font-weight: 600;">Ours (GIVE)</td>
-                      <td style="color: #3b8c8a;">8 / 10</td>
-                      <td style="color: #3b8c8a;">8 / 10</td>
-                      <td style="color: #3b8c8a;">6 / 10</td>
+                    <tr style="border-bottom: 1px solid #222;">
+                      <td style="padding: 14px 20px; text-align: center;">B</td>
+                      <td>3/5</td><td style="color:#5bc0be">5/5</td>
+                      <td>3/5</td><td style="color:#5bc0be">5/5</td>
+                      <td>0/5</td><td style="color:#5bc0be">5/5</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #222;">
+                      <td style="padding: 14px 20px; text-align: center;">C</td>
+                      <td>1/5</td><td style="color:#5bc0be">3/5</td>
+                      <td>2/5</td><td style="color:#5bc0be">4/5</td>
+                      <td>1/5</td><td style="color:#5bc0be">5/5</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <p class="has-text-centered" style="font-size: 0.95rem; color: #888; margin-top: 0.5rem;">
-                <strong>Table 3: Generalization to unseen human participants.</strong> Target Identification Success Rate evaluated on seen vs. unseen humans.
+              <p class="has-text-centered" style="font-size: 0.95rem; color: #a3a3a3; margin-top: 0rem; margin-bottom: 2rem;">
+                Success rates for the initial Identify & Grasp stage across varying object locations.
               </p>
-
             </div>
+
+              <h3 class="demo-task-title" style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem; text-align: center;">Generalization to unseen human participants</h3>
+              <div class="video-container" style="text-align: center; margin-top: 1rem;">
+                <video autoplay controls loop muted playsinline style="width: 100%; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.4); background-color: #1a1a1a;">
+                  <source src="static\videos\real_world\real-time experiments.mp4" type="video/mp4">
+                </video>
+              </div>
+              <p class="has-text-centered" style="font-size: 0.95rem; color: #a3a3a3; margin-top: 0.5rem; margin-bottom: 2rem;">
+                Robustness demonstration against variations in body shape, clothing, and hand size.
+              </p>
+            </div>
+
           </div>
         </div>
       </div>
     </section>
-    <!-- End Robustness & Generalization -->
 
+    <div style="width: 100%; background-color: #0f0f0f; padding: 2rem 0;">
+      <div style="height: 1px; background: linear-gradient(to right, transparent, #333 50%, transparent); width: 80%; margin: 0 auto;"></div>
+    </div>
 
     <!-- BibTeX -->
     <section class="section" id="BibTeX">
